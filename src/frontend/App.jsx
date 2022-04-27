@@ -1,7 +1,16 @@
+import { useEffect } from "react";
 import { Switch, Link, BrowserRouter as Router, Route } from "react-router-dom";
+import { useAuth } from "./hooks/use-auth";
+import Login from "./pages/Login";
 import Registration from "./pages/Registration";
 
 function App() {
+  const auth = useAuth();
+
+  useEffect(() => {
+    auth.refresh();
+  }, []);
+
   return (
     <Router>
       <div>
@@ -31,6 +40,9 @@ function App() {
           </Route>
           <Route path="/signup">
             <Registration />
+          </Route>
+          <Route path="/signin">
+            <Login />
           </Route>
         </Switch>
       </div>

@@ -3,7 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../../hooks/use-auth";
 import styles from "./styles.module.scss";
 
-function Registration() {
+function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
@@ -11,7 +11,7 @@ function Registration() {
 
   const handleClick = () => {
     return auth
-      .signup(email, password)
+      .signin(email, password)
       .then(() => {
         history.push("/");
       })
@@ -25,10 +25,9 @@ function Registration() {
       <div className={styles.leftColumn}>
         <div className={styles.container}>
           <div className={styles.headingsContainer}>
-            <h2 className={styles.heading}>Sign up today</h2>
+            <h2 className={styles.heading}>Welcome back</h2>
             <p className={styles.lead}>
-              Welcome! With Social Gap you can easily share photos and videos
-              with family and friends
+              Enter your credentials to access your account
             </p>
           </div>
           <div className={styles.inputContainer}>
@@ -48,11 +47,11 @@ function Registration() {
             </div>
           </div>
           <div className={styles.buttonContainer}>
-            <button onClick={handleClick}>Sign up</button>
+            <button onClick={handleClick}>Sign in</button>
           </div>
           <div className={styles.flavor}>
             <span>
-              Already have an acccount? <Link to="/signin">Sign in here</Link>
+              Don't have an acccount? <Link to="/signup">Sign up for free</Link>
             </span>
           </div>
         </div>
@@ -62,4 +61,4 @@ function Registration() {
   );
 }
 
-export default Registration;
+export default Login;
