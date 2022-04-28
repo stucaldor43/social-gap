@@ -5,7 +5,7 @@ import "./index.css";
 import axios from "axios";
 import { ProvideAuth } from "./hooks/use-auth";
 
-axios.defaults.baseURL = "http://localhost:4000";
+axios.defaults.baseURL = import.meta.env.VITE_SERVER_URL;
 axios.defaults.headers.post["Content-Type"] = "application/json";
 axios.defaults.withCredentials = true;
 
