@@ -1,0 +1,21 @@
+@import "./../../../scss/vars/spacing/index.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoContainer {
+  padding: $spacing-sm $spacing-sm;
+}
+
+.logo {
+  width: 96px;
+  height: auto;
+  margin: 0 0 0 -30px;
+}
+
+.notificationsContainer {
+  padding: $spacing-sm $spacing-sm;
+}

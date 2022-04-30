@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Switch, Link, BrowserRouter as Router, Route } from "react-router-dom";
+import AuthUserLayout from "./components/layout/AuthUserLayout";
 import { useAuth } from "./hooks/use-auth";
 import Login from "./pages/Login";
 import Registration from "./pages/Registration";
@@ -30,13 +31,19 @@ function App() {
         </ul>
         <Switch>
           <Route exact path="/">
-            <Home />
+            <AuthUserLayout>
+              <Home />
+            </AuthUserLayout>
           </Route>
           <Route path="/messages">
-            <About />
+            <AuthUserLayout>
+              <About />
+            </AuthUserLayout>
           </Route>
           <Route path="/dashboard">
-            <Dashboard />
+            <AuthUserLayout>
+              <Dashboard />
+            </AuthUserLayout>
           </Route>
           <Route path="/signup">
             <Registration />
@@ -61,7 +68,7 @@ function Home() {
 function About() {
   return (
     <div>
-      <h2>Messages</h2>
+      <h2>About</h2>
     </div>
   );
 }

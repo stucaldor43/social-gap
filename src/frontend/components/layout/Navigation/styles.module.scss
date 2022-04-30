@@ -1,0 +1,25 @@
+@import "./../../../scss/vars/spacing/index.scss";
+@import "./../../../scss/vars/colors/index.scss";
+
+.navigation {
+  background-color: $navigation-bg;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: $spacing-xs;
+}
+
+.active {
+}
+
+.active path {
+  fill: $site-primary;
+}
+
+.moreActionsButton {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
