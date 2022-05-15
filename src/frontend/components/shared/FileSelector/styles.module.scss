@@ -1,0 +1,87 @@
+@import "./../../../scss/vars/spacing/";
+@import "./../../../scss/vars/colors/";
+
+.fileSelector {
+  margin: 0 0;
+}
+
+.uploader {
+  border: thin dashed $lightgray;
+  padding: $spacing-sm $spacing-sm;
+  width: calc(50% - $spacing-xs);
+  height: 5rem;
+  position: relative;
+  margin: 0 $spacing-xxs $spacing-xs $spacing-xxs;
+}
+
+@media (min-width: 425px) {
+  .uploader {
+    width: calc(25% - $spacing-xs);
+  }
+}
+
+.innerBlock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fileInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}
+
+.shelf {
+  margin: 0 -$spacing-xxs;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filePreviewThumbnail {
+  position: relative;
+  z-index: 1;
+  width: calc(50% - $spacing-xs);
+  height: 5rem;
+  margin: 0 $spacing-xxs $spacing-xs $spacing-xxs;
+}
+
+@media (min-width: 425px) {
+  .filePreviewThumbnail {
+    width: calc(25% - $spacing-xs);
+  }
+}
+
+.filePreviewThumbnail svg {
+  width: 40px;
+  height: 40px;
+}
+
+.filePreviewThumbnail path {
+  fill: #fff;
+}
+
+.deleteFileButton {
+  background: transparent;
+  border: none;
+  padding: 0;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+}
+
+.image {
+  border-radius: 0.25rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

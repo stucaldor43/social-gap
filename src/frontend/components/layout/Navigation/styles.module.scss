@@ -4,6 +4,7 @@
 .navigation {
   background-color: $navigation-bg;
   position: fixed;
+  z-index: 99;
   bottom: 0;
   width: 100%;
   display: flex;

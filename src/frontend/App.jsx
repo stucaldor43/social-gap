@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Switch, Link, BrowserRouter as Router, Route } from "react-router-dom";
 import AuthUserLayout from "./components/layout/AuthUserLayout";
 import { useAuth } from "./hooks/use-auth";
+import CreatePost from "./pages/CreatePost";
 import Login from "./pages/Login";
 import Registration from "./pages/Registration";
 
@@ -33,6 +34,11 @@ function App() {
           <Route exact path="/">
             <AuthUserLayout>
               <Home />
+            </AuthUserLayout>
+          </Route>
+          <Route path="/post/new">
+            <AuthUserLayout>
+              <CreatePost />
             </AuthUserLayout>
           </Route>
           <Route path="/messages">
