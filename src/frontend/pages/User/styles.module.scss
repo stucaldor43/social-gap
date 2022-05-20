@@ -1,0 +1,94 @@
+@import "./../../scss/vars/colors/index.scss";
+@import "./../../scss/vars/spacing/index.scss";
+
+.page {
+  // padding: $spacing-sm $spacing-sm 70px $spacing-sm; /* 70px = navigation height + desired padding */
+  min-height: calc(100vh - 142px);
+}
+
+.influencerDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 $spacing-sm;
+  margin: 0 0 $spacing-lg 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 768px) {
+  .influencerDetails {
+    justify-content: center;
+    flex-direction: row;
+    margin: 0;
+    padding: 64px 16px 48px 16px;
+  }
+}
+
+.outerImageBorder {
+  border: 2px solid green;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.influencerImage {
+  background-image: url(https://images.pexels.com/photos/2787341/pexels-photo-2787341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  height: 128px;
+  width: 128px;
+  border-radius: 50%;
+  background-size: cover;
+  border: 3px solid #fff;
+}
+
+@media (min-width: 1024px) {
+  .influencerImage {
+    height: 192px;
+    width: 192px;
+  }
+}
+
+.container {
+  // padding: $spacing-xs;
+  padding: $spacing-sm;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .container {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    font-size: 16px;
+  }
+}
+
+.influencerName {
+  font-weight: 600;
+}
+
+.influencerStats,
+.influencerEmail {
+  color: $grey;
+}
+
+.tabs {
+  padding: 0 $spacing-sm;
+  display: flex;
+  justify-content: space-around;
+}
+
+hr {
+  border-top: thin solid grey;
+}
+
+.shelf {
+  padding: $spacing-sm $spacing-sm;
+  display: flex;
+  flex-wrap: wrap;
+}

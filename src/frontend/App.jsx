@@ -5,6 +5,7 @@ import { useAuth } from "./hooks/use-auth";
 import CreatePost from "./pages/CreatePost";
 import Login from "./pages/Login";
 import Registration from "./pages/Registration";
+import User from "./pages/User";
 
 function App() {
   const auth = useAuth();
@@ -34,6 +35,11 @@ function App() {
           <Route exact path="/">
             <AuthUserLayout>
               <Home />
+            </AuthUserLayout>
+          </Route>
+          <Route exact path="/user/:id">
+            <AuthUserLayout>
+              <User />
             </AuthUserLayout>
           </Route>
           <Route path="/post/new">

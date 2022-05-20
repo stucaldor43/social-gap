@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CrossSvg from "../../svg/Cross";
 import UploadSvg from "../../svg/Upload";
-import { generateVideoThumbnail } from "../../../utils/generateVideoThumbnail";
+import { generateVideoThumbnail } from "../../../utils/generate-video-thumbnail";
 import styles from "./styles.module.scss";
 
 function FileSelector({ onFileSelect = () => {} }) {
